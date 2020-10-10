@@ -5,14 +5,14 @@ A URL shrotner service is used to convert long url's to shorter ones to save spa
 
 The below tech stack is used for creating the service.
 
-Language (Backend) : Java
-Framework (Backend) : Spring Boot
-Databse : Redis
+- Language (Backend) : Java
+- Framework (Backend) : Spring Boot
+- Databse : Redis
 
 How to run this application.
 
 Using Git:
-- $git clone https://github.com/anim007sharma/URLShortner.git
+- $ git clone https://github.com/anim007sharma/URLShortner.git
 - Open project in your editor and change application.properties file to point to your redis hostname and port.
 - Build spring project.
 
@@ -25,7 +25,7 @@ There are two endpoints
 - It will return a string of length 5 which will be your short url hash.
 
 2. For redirecting to original URL
-- {yourlocalhost}/api/v1/{shortUrl}
+- {yourlocalhost}/api/v1/get/{shortUrl}
 - In the palce of the path variable you have to pass the short url hash which was generated when you passed the original URL.
 - This method will be a GET request.
 - You will be redirected to the orignal link.
