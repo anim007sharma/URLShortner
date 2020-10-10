@@ -9,14 +9,15 @@ import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.view.RedirectView;
 import com.anim007sharma.urlshortner.service.URLService;
 
+
 @RestController
 @RequestMapping("/api/v1")
 public class URLController {
-
+	
 	@Autowired
 	private URLService urlService;
 
-	@RequestMapping(value="/{shortUrl}", method=RequestMethod.GET)
+	@RequestMapping(value="get/{shortUrl}", method=RequestMethod.GET)
 	public RedirectView getOriginalUrl(@PathVariable String shortUrl) {
 		String originalUrl = urlService.convertToOriginalUrl(shortUrl);
 		return new RedirectView(originalUrl);
@@ -24,7 +25,6 @@ public class URLController {
 	
 	@RequestMapping(value="/createUrl", method=RequestMethod.POST)
 	public String createShortUrl(@RequestBody String originalUrl) {
-		System.out.println(originalUrl);
 		return urlService.convertToShortUrl(originalUrl);
 	}
 

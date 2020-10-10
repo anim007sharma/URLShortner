@@ -1,15 +1,9 @@
 package com.anim007sharma.urlshortner.service;
 
-import java.util.Calendar;
-import java.util.Date;
-
 import org.apache.commons.codec.digest.DigestUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.stereotype.Service;
-
-import com.anim007sharma.urlshortner.entity.URL;
-import com.anim007sharma.urlshortner.repository.URLRepository;
 
 @Service
 public class URLService {
