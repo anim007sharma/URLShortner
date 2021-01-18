@@ -1,5 +1,5 @@
 # URLShortner
-This is an API for URL shortener service developed as part of the assignment from Cybrilla.com.
+This is an API for URL shortener service developed for shortening long urls using Apache Commons Library.
 
 A URL shrotner service is used to convert long url's to shorter ones to save space and easier to share.
 
